@@ -18,7 +18,6 @@ void ClientHandler() {
 		if (recv(client.Connection, msg, sizeof(msg), NULL) > 0) {
 			cout << msg << endl;
 			Sleep(10);
-			cout << "2\n";
 		}
 	}
 }
@@ -31,7 +30,7 @@ int main(int argc, char* argv[]) {
 	char from[256];
 	char to[256];
 	char freight_type[256];
-	int volume;
+	char cars_count[256];
 	while (true) {
 		Sleep(100);
 		cout << "Input city1" << endl;
@@ -40,11 +39,14 @@ int main(int argc, char* argv[]) {
 		cin.getline(to, sizeof(to));
 		cout << "Input type of freight (liquid, wood or ore)" << endl;;
 		cin.getline(freight_type, sizeof(freight_type));
-		cout << "Input volume of freight (m^3)" << endl;
-		cin >> volume;
+		cout << "Input count of cars" << endl;
+		cin.getline(cars_count, sizeof(cars_count));
+		send(client.Connection, from, sizeof(from), NULL);
+		send(client.Connection, to, sizeof(to), NULL);
 		send(client.Connection, freight_type, sizeof(freight_type), NULL);
-		send(client.Connection, (char*)volume, sizeof(int), NULL);
-		cout << "1\n";
+		send(client.Connection, cars_count, sizeof(int), NULL);
+		cin.clear();
+		cout << endl;
 	}
 
 	system("pause");

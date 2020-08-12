@@ -1,5 +1,3 @@
-﻿  Client.cpp
-  MainClient.cpp
-C:\Workspace\C++\Trains\Client\Client\Client\MainClient.cpp(46,40): warning C4312: приведение типов: преобразование из "int" в "char *" большего размера
-  Создание кода...
-  Client.vcxproj -> C:\Workspace\C++\Trains\Client\Client\x64\Debug\Client.exe
+﻿  MainClient.cpp
+C:\Workspace\C++\Trains\Client\Client\Client\MainClient.cpp(45,44): warning C4312: приведение типов: преобразование из "int" в "char *" большего размера
+LINK : fatal error LNK1168: не удается открыть C:\Workspace\C++\Trains\Client\Client\x64\Debug\Client.exe для записи
