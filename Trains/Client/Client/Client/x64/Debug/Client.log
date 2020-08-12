@@ -1,0 +1,5 @@
+﻿  Client.cpp
+  MainClient.cpp
+C:\Workspace\C++\Trains\Client\Client\Client\MainClient.cpp(46,40): warning C4312: приведение типов: преобразование из "int" в "char *" большего размера
+  Создание кода...
+  Client.vcxproj -> C:\Workspace\C++\Trains\Client\Client\x64\Debug\Client.exe
